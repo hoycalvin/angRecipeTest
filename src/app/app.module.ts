@@ -5,10 +5,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TestComponent } from './components/test/test.component';
 import { ReclistComponent } from './components/recipes/reclist/reclist.component';
-import { RecdescComponent } from './components/recipes/reclist/recdesc/recdesc.component';
+import { RecdescComponent } from './components/recipes/recdesc/recdesc.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { ShoplistComponent } from './components/shoplist/shoplist.component';
 import { ShopEditComponent } from './components/shoplist/shop-edit/shop-edit.component';
+import { RecitemComponent } from './components/recipes/reclist/recitem/recitem.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ShopEditComponent } from './components/shoplist/shop-edit/shop-edit.com
     RecdescComponent,
     RecipesComponent,
     ShoplistComponent,
-    ShopEditComponent
+    ShopEditComponent,
+    RecitemComponent
   ],
   imports: [
     BrowserModule
