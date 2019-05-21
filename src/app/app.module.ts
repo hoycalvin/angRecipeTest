@@ -10,6 +10,7 @@ import { RecipesComponent } from './components/recipes/recipes.component';
 import { ShoplistComponent } from './components/shoplist/shoplist.component';
 import { ShopEditComponent } from './components/shoplist/shop-edit/shop-edit.component';
 import { RecitemComponent } from './components/recipes/reclist/recitem/recitem.component';
+import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { RecitemComponent } from './components/recipes/reclist/recitem/recitem.c
     RecitemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
