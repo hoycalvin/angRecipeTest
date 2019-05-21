@@ -11,6 +11,7 @@ import { ShoplistComponent } from './components/shoplist/shoplist.component';
 import { ShopEditComponent } from './components/shoplist/shop-edit/shop-edit.component';
 import { RecitemComponent } from './components/recipes/reclist/recitem/recitem.component';
 import { FormsModule } from "@angular/forms";
+import { DropdownDirective } from './components/shared/dropdown.directive';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from "@angular/forms";
     RecipesComponent,
     ShoplistComponent,
     ShopEditComponent,
-    RecitemComponent
+    RecitemComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule, FormsModule
