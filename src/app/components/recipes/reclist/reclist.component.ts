@@ -1,4 +1,4 @@
-import {Component, OnInit, EventEmitter, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Recipe } from "./recipe.model";
 import {RecservService} from "../recserv.service";
 
@@ -8,7 +8,6 @@ import {RecservService} from "../recserv.service";
   styleUrls: ['./reclist.component.css']
 })
 export class ReclistComponent implements OnInit {
-  @Output() recipeWasSelected = new EventEmitter<Recipe>();
 
   recipes: Recipe[];
 
@@ -16,10 +15,6 @@ export class ReclistComponent implements OnInit {
 
   ngOnInit() {
     this.recipes = this.recService.getRecipes();
-  }
-
-  onRecSelect(recipe: Recipe){
-    this.recipeWasSelected.emit(recipe);
   }
 
 }
