@@ -1,5 +1,6 @@
 import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 import { Recipe } from "./recipe.model";
+import {RecservService} from "../recserv.service";
 
 @Component({
   selector: 'app-reclist',
@@ -9,13 +10,12 @@ import { Recipe } from "./recipe.model";
 export class ReclistComponent implements OnInit {
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
 
-  recipes: Recipe[] = [
-    new Recipe("A Test Recipe", "This be a test", "https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg"),
-    new Recipe("Other Test Recipe", "This be test", "https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg")
-  ];
-  constructor() { }
+  recipes: Recipe[];
+
+  constructor(private recService: RecservService) { }
 
   ngOnInit() {
+    this.recipes = this.recService.getRecipes();
   }
 
   onRecSelect(recipe: Recipe){
