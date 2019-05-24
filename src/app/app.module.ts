@@ -12,7 +12,7 @@ import { ShopEditComponent } from './components/shoplist/shop-edit/shop-edit.com
 import { RecitemComponent } from './components/recipes/reclist/recitem/recitem.component';
 import { FormsModule } from "@angular/forms";
 import { DropdownDirective } from './components/shared/dropdown.directive';
-
+import { ShopListServService } from "./components/shoplist/shop-list-serv.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { DropdownDirective } from './components/shared/dropdown.directive';
   imports: [
     BrowserModule, FormsModule
   ],
-  providers: [],
+  providers: [ShopListServService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

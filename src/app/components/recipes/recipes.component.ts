@@ -14,7 +14,9 @@ export class RecipesComponent implements OnInit {
   constructor(private recService: RecservService) { }
 
   ngOnInit() {
+    //use subscribe to have the listener(recSelected) stay informed of any changes
     this.recService.recSelected.subscribe(
+      //using the ES6 arrow function, set any Recipe to the newly selected recipe.
       (recipe: Recipe) => {
         this.selectedRecipe = recipe;
       }
