@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Recipe } from "../recipe.model";
+import {RecservService} from "../recserv.service";
 
 @Component({
   selector: 'app-recdesc',
@@ -9,9 +10,12 @@ import { Recipe } from "../recipe.model";
 export class RecdescComponent implements OnInit {
 
   @Input() recipe: Recipe;
-  constructor() { }
+  constructor(private recServ: RecservService) { }
 
   ngOnInit() {
   }
 
+  onAddShopList() {
+    this.recServ.addIngToShopList(this.recipe.ingredients);
+  }
 }
