@@ -14,6 +14,7 @@ export class ShoplistComponent implements OnInit {
 
   ngOnInit() {
     this.ingredients = this.slServ.getIngredients();
+    //lets know us (.subscribe) whenever there is a change to ingredients array
     this.slServ.ingChangedEmit.subscribe(
       (ingredients: Ingredient[]) => {
           this.ingredients = ingredients;

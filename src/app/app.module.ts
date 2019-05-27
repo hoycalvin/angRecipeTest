@@ -13,6 +13,7 @@ import { RecitemComponent } from './components/recipes/reclist/recitem/recitem.c
 import { FormsModule } from "@angular/forms";
 import { DropdownDirective } from './components/shared/dropdown.directive';
 import { ShopListServService } from "./components/shoplist/shop-list-serv.service";
+import {AppRouteModule} from "./app-route/app-route.module";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ShopListServService } from "./components/shoplist/shop-list-serv.servic
     DropdownDirective
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, AppRouteModule
   ],
   providers: [ShopListServService],
   bootstrap: [AppComponent]
