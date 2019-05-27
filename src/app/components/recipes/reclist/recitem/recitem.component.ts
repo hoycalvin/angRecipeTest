@@ -1,6 +1,5 @@
 import {Component, OnInit, Input } from '@angular/core';
 import {Recipe} from "../../recipe.model";
-import {RecservService} from "../../recserv.service";
 
 @Component({
   selector: 'app-recitem',
@@ -11,13 +10,8 @@ export class RecitemComponent implements OnInit {
 
   @Input() recipe: Recipe;
 
-  constructor(private recService: RecservService) { }
-
   ngOnInit() {
   }
 
-  onSelected(){
-    this.recService.recSelected.emit(this.recipe);
-  }
 
 }

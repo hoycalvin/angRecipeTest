@@ -35,6 +35,10 @@ export class RecservService {
     return this.recipes.slice();
   }
 
+  getRecipeById(index: number){
+    return this.recipes[index];
+  }
+
   addIngToShopList(ingredients: Ingredient[]){
     this.slServ.addIngredients(ingredients);
   }

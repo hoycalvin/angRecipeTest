@@ -2,15 +2,9 @@
   <div class="col-md-5">
     <app-reclist></app-reclist>
   </div>
+
+
   <div class="col-md-7">
-    <app-recdesc
-      *ngIf="selectedRecipe; else infoText"
-    [recipe]="selectedRecipe"></app-recdesc>
-
-    <ng-template #infoText>
-      <p>Please Select a Recipe</p>
-    </ng-template>
-
-
+    <router-outlet></router-outlet>
   </div>
 </div>
